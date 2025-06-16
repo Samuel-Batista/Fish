@@ -6,6 +6,7 @@ import time
 class InputController:
     def __init__(self):
         self.keyboard = Controller()
+        self.mouse = MouseController()
         self.pressed_keys = set()  # Armazena as teclas atualmente pressionadas
         self.lock = threading.Lock()  # Para thread safety
     

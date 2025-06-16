@@ -4,22 +4,21 @@ from wc import WindowCapture
 import cv2 as cv
 import time
 import winsound
-from time import sleep
-import random 
+import random
 
 keyborad = InputController()
 screen = WindowCapture()
 imgProcessor = ImageProcessor()
 
 templates = {
-    "1" : cv.imread("./templates/1.png"),
-    "2" : cv.imread("./templates/2.png"),
-    "3" : cv.imread("./templates/3.png"),
-    "4" : cv.imread("./templates/4.png"),
-    "5" : cv.imread("./templates/5.png"),
-    "6" : cv.imread("./templates/6.png"),
-    "7" : cv.imread("./templates/7.png"),
-    "8" : cv.imread("./templates/8.png"),
+    "1" : cv.imread("./templates/Notifications/Numbers/1.png"),
+    "2" : cv.imread("./templates/Notifications/Numbers/2.png"),
+    "3" : cv.imread("./templates/Notifications/Numbers/3.png"),
+    "4" : cv.imread("./templates/Notifications/Numbers/4.png"),
+    "5" : cv.imread("./templates/Notifications/Numbers/5.png"),
+    "6" : cv.imread("./templates/Notifications/Numbers/6.png"),
+    "7" : cv.imread("./templates/Notifications/Numbers/7.png"),
+    "8" : cv.imread("./templates/Notifications/Numbers/8.png"),
 }
 
 def emit_beep():
