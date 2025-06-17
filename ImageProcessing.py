@@ -10,15 +10,15 @@ class ImageProcessor:
     
     def template_matching(self, image, template):
         """
-        Realiza template matching entre uma imagem e um template
+        Realiza template matching e retorna o ponto central da melhor correspondência.
         
         Args:
             image (numpy.ndarray): Imagem principal (array numpy)
             template (numpy.ndarray): Template (array numpy)
             
         Returns:
-            tuple: (melhor_posicao, porcentagem_similaridade)
-                - melhor_posicao: tupla (x, y) da posição do melhor match
+            tuple: (ponto_central, porcentagem_similaridade)
+                - ponto_central: tupla (x, y) do centro da área do melhor match
                 - porcentagem_similaridade: float de 0 a 100 representando a similaridade
         """
         try:
@@ -36,19 +36,24 @@ class ImageProcessor:
             else:
                 template_gray = template
             
+            # Obtém as dimensões do template
+            h, w = template_gray.shape[:2]
+
             # Realiza o template matching usando TM_CCOEFF_NORMED
             result = cv2.matchTemplate(image_gray, template_gray, cv2.TM_CCOEFF_NORMED)
             
-            # Encontra a localização do melhor match
+            # Encontra a localização do melhor match (canto superior esquerdo)
             min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(result)
             
-            # Para TM_CCOEFF_NORMED, o melhor match é o max_loc
-            melhor_posicao = max_loc
+            # Calcula o ponto central da área encontrada
+            center_x = max_loc[0] + w // 2
+            center_y = max_loc[1] + h // 2
+            ponto_central = (center_x, center_y)
             
             # Converte o valor de similaridade para porcentagem (0-100)
             porcentagem_similaridade = max_val * 100
             
-            return melhor_posicao, porcentagem_similaridade
+            return ponto_central, porcentagem_similaridade
             
         except Exception as e:
             print(f"Erro durante o template matching: {str(e)}")
@@ -140,29 +145,33 @@ class ImageProcessor:
             padding (int): Pixels extras ao redor da área encontrada
             
         Returns:
-            tuple: (imagem_cortada, posicao, similaridade) ou (None, None, 0.0) se não encontrar
+            tuple: (imagem_cortada, posicao_central, similaridade) ou (None, None, 0.0) se não encontrar
         """
         try:
-            # Encontra o template na imagem
-            posicao, similaridade = self.template_matching(image, template)
+            # Encontra o ponto central do template na imagem
+            posicao_central, similaridade = self.template_matching(image, template)
             
-            if posicao is None:
+            if posicao_central is None:
                 print("Template não encontrado na imagem")
                 return None, None, 0.0
             
             # Obtém as dimensões do template
             template_height, template_width = template.shape[:2]
             
-            # Calcula as coordenadas com padding
-            x = max(0, posicao[0] - padding)
-            y = max(0, posicao[1] - padding)
+            # Calcula o canto superior esquerdo a partir do centro
+            top_left_x = posicao_central[0] - template_width // 2
+            top_left_y = posicao_central[1] - template_height // 2
+
+            # Calcula as coordenadas de corte com padding
+            x = max(0, top_left_x - padding)
+            y = max(0, top_left_y - padding)
             width = template_width + (2 * padding)
             height = template_height + (2 * padding)
             
             # Corta a área
             cropped_image = self.crop_image(image, x, y, width, height)
             
-            return cropped_image, posicao, similaridade
+            return cropped_image, posicao_central, similaridade
             
         except Exception as e:
             print(f"Erro ao cortar área do template: {str(e)}")
@@ -214,7 +223,7 @@ class ImageProcessor:
             threshold (float): Threshold mínimo (0.0 a 1.0)
             
         Returns:
-            tuple: (melhor_posicao, porcentagem_similaridade) ou (None, 0.0) se não atender o threshold
+            tuple: (ponto_central, porcentagem_similaridade) ou (None, 0.0) se não atender o threshold
         """
         posicao, similaridade = self.template_matching(image, template)
         
@@ -236,17 +245,21 @@ class ImageProcessor:
             numpy.ndarray: Imagem com o retângulo desenhado ou None se não encontrar
         """
         try:
-            posicao, similaridade = self.template_matching(image, template)
+            posicao_central, similaridade = self.template_matching(image, template)
             
-            if posicao is not None:
+            if posicao_central is not None:
                 # Trabalha com uma cópia se solicitado
                 result_image = image.copy() if draw_on_copy else image
                 
                 # Obtém as dimensões do template
                 h, w = template.shape[:2]
                 
-                # Desenha um retângulo ao redor da área encontrada
-                top_left = posicao
+                # Calcula o canto superior esquerdo a partir do centro para desenhar o retângulo
+                top_left_x = posicao_central[0] - w // 2
+                top_left_y = posicao_central[1] - h // 2
+                top_left = (top_left_x, top_left_y)
+                
+                # Calcula o canto inferior direito
                 bottom_right = (top_left[0] + w, top_left[1] + h)
                 
                 cv2.rectangle(result_image, top_left, bottom_right, (0, 255, 0), 2)
@@ -282,15 +295,13 @@ class ImageProcessor:
             hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
 
             # Define os limites inferior e superior para a cor verde no espaço HSV
-            # Estes valores podem precisar de ajuste dependendo da tonalidade de verde
             lower_green = np.array([35, 40, 40])
             upper_green = np.array([85, 255, 255])
 
-            # Cria a máscara binária: pixels dentro do intervalo ficam brancos, o resto preto
+            # Cria a máscara binária
             mask = cv2.inRange(hsv, lower_green, upper_green)
 
-            # Aplica a máscara na imagem original usando uma operação bitwise AND
-            # Isso mantém os pixels da imagem original onde a máscara é branca (verde)
+            # Aplica a máscara na imagem original
             masked_image = cv2.bitwise_and(image, image, mask=mask)
 
             return masked_image
@@ -302,7 +313,6 @@ class ImageProcessor:
 # Exemplo de uso
 if __name__ == "__main__":
     # Crie ou carregue suas imagens aqui
-    # Para este exemplo, vamos criar imagens de teste se não existirem
     if cv2.imread("imagem.png") is None:
         print("Criando imagem.png de teste...")
         test_img = np.zeros((500, 500, 3), dtype=np.uint8)
@@ -328,21 +338,20 @@ if __name__ == "__main__":
         # Exemplo de template matching
         posicao, similaridade = processor.template_matching(image, template)
         if posicao:
-            print(f"Template encontrado em: {posicao}, Similaridade: {similaridade:.2f}%")
+            # A posição agora é o ponto central
+            print(f"Ponto central do template encontrado em: {posicao}, Similaridade: {similaridade:.2f}%")
         
         # Visualizar resultado do template matching
         result_img = processor.visualizar_resultado(image, template)
         if result_img is not None:
             cv2.imshow("Resultado Template Matching", result_img)
 
-        # --- NOVO: Exemplo de uso da máscara verde ---
+        # Exemplo de uso da máscara verde
         green_masked_image = processor.apply_green_mask(image)
         if green_masked_image is not None:
-            # Exibe a imagem original e a imagem com a máscara
             cv2.imshow("Imagem Original", image)
             cv2.imshow("Imagem com Mascara Verde", green_masked_image)
         
-        # Aguarda uma tecla ser pressionada para fechar as janelas
         print("\nPressione qualquer tecla para fechar as janelas de imagem.")
         cv2.waitKey(0)
         cv2.destroyAllWindows()
