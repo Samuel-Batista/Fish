@@ -1,3 +1,6 @@
 testes/
 templatesOrig/
 __pycache__/
+print/
+build/
+dist/

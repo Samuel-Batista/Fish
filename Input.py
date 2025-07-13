@@ -14,10 +14,15 @@ class InputController:
         self.keys = {
             "f2" : ALL_KELLS.f2,
             "backspace" : ALL_KELLS.backspace,
+            "up": ALL_KELLS.up,
+            "down": ALL_KELLS.down,
+            "left": ALL_KELLS.left,
+            "rigt": ALL_KELLS.right,
+            "enter": ALL_KELLS.enter,
         }
 
-        self.response_time_range = (0.3, 0.4)
-        self.release_time_range = (0.2, 0.3)
+        self.response_time_range = (0.1, 0.15)
+        self.release_time_range = (0.1, 0.15)
     
     def pressKey(self, key):
         with self.lock:
@@ -29,7 +34,7 @@ class InputController:
         thread.daemon = True
         thread.start()
     
-    def mouseClick(self, pos, speed_pps=1200, button=Button.left):
+    def mouseClick(self, pos, speed_pps=5000, button=Button.left):
         """
         Inicia o processo de mover e clicar com o mouse em uma thread separada.
         :param pos: Uma tupla (x, y) com as coordenadas de destino.
@@ -57,7 +62,7 @@ class InputController:
             if current_key in self.keys:
                 current_key = self.keys[current_key]
 
-            print(f"Tempo de resposta da tecla: {response_delay:.2f}s / Tempo de pressão: {release_delay:.2f}s")
+            # print(f"Tempo de resposta da tecla: {response_delay:.2f}s / Tempo de pressão: {release_delay:.2f}s")
 
             time.sleep(response_delay)
             self.keyboard.press(current_key)
@@ -95,7 +100,7 @@ class InputController:
                 num_steps = max(num_steps, 20)
                 time_per_step = duration / num_steps
 
-                print(f"Movendo mouse de {start_pos} para {end_pos} em {duration:.2f}s (com desaceleração)...")
+                # print(f"Movendo mouse de {start_pos} para {end_pos} em {duration:.2f}s (com desaceleração)...")
 
                 for i in range(num_steps + 1):
                     linear_t = i / num_steps
@@ -118,7 +123,7 @@ class InputController:
             self.mouse.press(button)
             time.sleep(click_duration)
             self.mouse.release(button)
-            print(f"Clique em {pos} executado.")
+            # print(f"Clique em {pos} executado.")
 
         except Exception as e:
             print(f"Ocorreu um erro durante o clique do mouse: {e}")

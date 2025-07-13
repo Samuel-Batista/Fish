@@ -1,0 +1,1183 @@
++2step
++accurate_aim
++aim
++arrest
++attack
++attack2
++boosterPressed
++cellphone_camera_dof
++cellphone_camera_expression
++cellphone_camera_focus_lock
++cellphone_camera_grid
++cellphone_camera_selfie
++cellphone_cancel
++cellphone_down
++cellphone_extra_option
++cellphone_left
++cellphone_option
++cellphone_right
++cellphone_scroll_backward
++cellphone_scroll_forward
++cellphone_select
++cellphone_up
++character_wheel
++cinematic_slowmo
++clutchon
++context
++context_secondary
++cover
++creator_accept
++creator_delete
++creator_ls
++creator_lt
++creator_menu_toggle
++creator_rs
++creator_rt
++cursor_accept
++cursor_cancel
++cursor_scroll_down
++cursor_scroll_up
++cursor_x
++cursor_y
++detonate
++dive
++drop_ammo
++drop_weapon
++duck
++eat_snack
++enter
++enter_cheat_code
++frontend_accept
++frontend_axis_x
++frontend_axis_y
++frontend_cancel
++frontend_delete
++frontend_down
++frontend_endscreen_accept
++frontend_endscreen_expand
++frontend_lb
++frontend_leaderboard
++frontend_left
++frontend_ls
++frontend_lt
++frontend_pause
++frontend_pause_alternate
++frontend_rb
++frontend_rdown
++frontend_right
++frontend_right_axis_x
++frontend_right_axis_y
++frontend_rleft
++frontend_rright
++frontend_rs
++frontend_rt
++frontend_rup
++frontend_select
++frontend_social_club
++frontend_social_club_secondary
++frontend_up
++frontend_x
++frontend_y
++gizmoLocal
++gizmoRotation
++gizmoScale
++gizmoSelect
++gizmoTranslation
++hud_special
++hudmarker_select
++input
++input_first
++input_last
++inputs
++interaction_menu
++jump
++look_behind
++look_down
++look_down_only
++look_left
++look_left_only
++look_lr
++look_right
++look_right_only
++look_ud
++look_up
++look_up_only
++map
++map_poi
++mapping_mouse_x
++mapping_mouse_y
++melee_attack1
++melee_attack2
++melee_attack_alternate
++melee_attack_heavy
++melee_attack_light
++melee_block
++move_down
++move_down_only
++move_left
++move_left_only
++move_lr
++move_right
++move_right_only
++move_ud
++move_up
++move_up_only
++mp_text_chat_all
++mp_text_chat_crew
++mp_text_chat_friends
++mp_text_chat_team
++multiplayer_info
++next_camera
++next_weapon
++nitropressed
++openphone
++ox_lib-radial
++ox_target
++parachute_brake_left
++parachute_brake_right
++parachute_deploy
++parachute_detach
++parachute_pitch_down_only
++parachute_pitch_ud
++parachute_pitch_up_only
++parachute_precision_landing
++parachute_smoke
++parachute_turn_left_only
++parachute_turn_lr
++parachute_turn_right_only
++phone
++pickup
++prev_weapon
++push_to_talk
++quad_loco_reverse
++radio_wheel_lr
++radio_wheel_ud
++radiotalk
++rappel_jump
++rappel_long_jump
++rappel_smash_window
++reload
++replay_advance
++replay_back
++replay_cameradown
++replay_cameraup
++replay_clip_delete
++replay_ctrl
++replay_cyclemarkerleft
++replay_cyclemarkerright
++replay_endpoint
++replay_ffwd
++replay_fovdecrease
++replay_fovincrease
++replay_hidehud
++replay_marker_delete
++replay_newmarker
++replay_pause
++replay_preview
++replay_preview_audio
++replay_record
++replay_restart
++replay_rewind
++replay_save
++replay_screenshot
++replay_showhotkey
++replay_snapmatic_photo
++replay_start_stop_recording
++replay_start_stop_recording_secondary
++replay_startpoint
++replay_timeline_duplicate_clip
++replay_timeline_pickup_clip
++replay_timeline_place_clip
++replay_timeline_save
++replay_toggle_timeline
++replay_toggletime
++replay_toggletips
++replay_tools
++respawn_faster
++save_replay_clip
++scaled_look_down_only
++scaled_look_left_only
++scaled_look_lr
++scaled_look_right_only
++scaled_look_ud
++scaled_look_up_only
++script_lb
++script_left_axis_x
++script_left_axis_y
++script_ls
++script_lt
++script_pad_down
++script_pad_left
++script_pad_right
++script_pad_up
++script_rb
++script_rdown
++script_right_axis_x
++script_right_axis_y
++script_rleft
++script_rright
++script_rs
++script_rt
++script_rup
++script_select
++scripted_fly_lr
++scripted_fly_ud
++scripted_fly_zdown
++scripted_fly_zup
++select_character_franklin
++select_character_michael
++select_character_multiplayer
++select_character_trevor
++select_next_weapon
++select_prev_weapon
++select_weapon
++select_weapon_auto_rifle
++select_weapon_handgun
++select_weapon_heavy
++select_weapon_melee
++select_weapon_shotgun
++select_weapon_smg
++select_weapon_sniper
++select_weapon_special
++select_weapon_unarmed
++skip_cutscene
++sniper_zoom
++sniper_zoom_in
++sniper_zoom_in_alternate
++sniper_zoom_in_only
++sniper_zoom_in_secondary
++sniper_zoom_out
++sniper_zoom_out_alternate
++sniper_zoom_out_only
++sniper_zoom_out_secondary
++special_ability
++special_ability_pc
++special_ability_secondary
++sprint
++switch_visor
++talk
++tcs
++throw_grenade
++use_armor
++veh_accelerate
++veh_aim
++veh_attack
++veh_attack2
++veh_bike_wings
++veh_brake
++veh_car_jump
++veh_cin_cam
++veh_cinematic_down_only
++veh_cinematic_lr
++veh_cinematic_ud
++veh_cinematic_up_only
++veh_drive_look
++veh_drive_look2
++veh_drop_projectile
++veh_duck
++veh_exit
++veh_fly_attack
++veh_fly_attack2
++veh_fly_attack_camera
++veh_fly_bomb_bay
++veh_fly_boost
++veh_fly_counter
++veh_fly_duck
++veh_fly_mouse_control_override
++veh_fly_pitch_down_only
++veh_fly_pitch_ud
++veh_fly_pitch_up_only
++veh_fly_roll_left_only
++veh_fly_roll_lr
++veh_fly_roll_right_only
++veh_fly_select_next_weapon
++veh_fly_select_prev_weapon
++veh_fly_select_target_left
++veh_fly_select_target_right
++veh_fly_throttle_down
++veh_fly_throttle_up
++veh_fly_undercarriage
++veh_fly_vertical_flight_mode
++veh_fly_yaw_left
++veh_fly_yaw_right
++veh_grappling_hook
++veh_gun_down
++veh_gun_left
++veh_gun_lr
++veh_gun_right
++veh_gun_ud
++veh_gun_up
++veh_handbrake
++veh_headlight
++veh_horn
++veh_hotwire_left
++veh_hotwire_right
++veh_hydraulics_control_down
++veh_hydraulics_control_left
++veh_hydraulics_control_lr
++veh_hydraulics_control_right
++veh_hydraulics_control_toggle
++veh_hydraulics_control_ud
++veh_hydraulics_control_up
++veh_jump
++veh_look_behind
++veh_look_left
++veh_look_right
++veh_melee_hold
++veh_melee_left
++veh_melee_right
++veh_mouse_control_override
++veh_move_down
++veh_move_down_only
++veh_move_left
++veh_move_left_only
++veh_move_lr
++veh_move_right
++veh_move_right_only
++veh_move_ud
++veh_move_up
++veh_move_up_only
++veh_next_radio
++veh_next_radio_track
++veh_parachute
++veh_passenger_aim
++veh_passenger_attack
++veh_prev_radio
++veh_prev_radio_track
++veh_pushbike_front_brake
++veh_pushbike_pedal
++veh_pushbike_rear_brake
++veh_pushbike_sprint
++veh_radio_wheel
++veh_rocket_boost
++veh_roof
++veh_select_next_weapon
++veh_select_prev_weapon
++veh_shift_gear_down
++veh_shift_gear_up
++veh_shuffle
++veh_slowmo_down_only
++veh_slowmo_ud
++veh_slowmo_up_only
++veh_special
++veh_special_ability_franklin
++veh_stunt_ud
++veh_sub_ascend
++veh_sub_descend
++veh_sub_mouse_control_override
++veh_sub_pitch_down_only
++veh_sub_pitch_ud
++veh_sub_pitch_up_only
++veh_sub_throttle_down
++veh_sub_throttle_up
++veh_sub_turn_hard_left
++veh_sub_turn_hard_right
++veh_sub_turn_left_only
++veh_sub_turn_lr
++veh_sub_turn_right_only
++veh_transform
++vstr
++weapon_special
++weapon_special_two
++weapon_wheel_lr
++weapon_wheel_next
++weapon_wheel_prev
++weapon_wheel_ud
++whistle
+-2step
+-accurate_aim
+-aim
+-arrest
+-attack
+-attack2
+-boosterPressed
+-cellphone_camera_dof
+-cellphone_camera_expression
+-cellphone_camera_focus_lock
+-cellphone_camera_grid
+-cellphone_camera_selfie
+-cellphone_cancel
+-cellphone_down
+-cellphone_extra_option
+-cellphone_left
+-cellphone_option
+-cellphone_right
+-cellphone_scroll_backward
+-cellphone_scroll_forward
+-cellphone_select
+-cellphone_up
+-character_wheel
+-cinematic_slowmo
+-clutchon
+-context
+-context_secondary
+-cover
+-creator_accept
+-creator_delete
+-creator_ls
+-creator_lt
+-creator_menu_toggle
+-creator_rs
+-creator_rt
+-cursor_accept
+-cursor_cancel
+-cursor_scroll_down
+-cursor_scroll_up
+-cursor_x
+-cursor_y
+-detonate
+-dive
+-drop_ammo
+-drop_weapon
+-duck
+-eat_snack
+-enter
+-enter_cheat_code
+-frontend_accept
+-frontend_axis_x
+-frontend_axis_y
+-frontend_cancel
+-frontend_delete
+-frontend_down
+-frontend_endscreen_accept
+-frontend_endscreen_expand
+-frontend_lb
+-frontend_leaderboard
+-frontend_left
+-frontend_ls
+-frontend_lt
+-frontend_pause
+-frontend_pause_alternate
+-frontend_rb
+-frontend_rdown
+-frontend_right
+-frontend_right_axis_x
+-frontend_right_axis_y
+-frontend_rleft
+-frontend_rright
+-frontend_rs
+-frontend_rt
+-frontend_rup
+-frontend_select
+-frontend_social_club
+-frontend_social_club_secondary
+-frontend_up
+-frontend_x
+-frontend_y
+-gizmoLocal
+-gizmoRotation
+-gizmoScale
+-gizmoSelect
+-gizmoTranslation
+-hud_special
+-hudmarker_select
+-input
+-input_first
+-input_last
+-inputs
+-interaction_menu
+-jump
+-look_behind
+-look_down
+-look_down_only
+-look_left
+-look_left_only
+-look_lr
+-look_right
+-look_right_only
+-look_ud
+-look_up
+-look_up_only
+-map
+-map_poi
+-mapping_mouse_x
+-mapping_mouse_y
+-melee_attack1
+-melee_attack2
+-melee_attack_alternate
+-melee_attack_heavy
+-melee_attack_light
+-melee_block
+-move_down
+-move_down_only
+-move_left
+-move_left_only
+-move_lr
+-move_right
+-move_right_only
+-move_ud
+-move_up
+-move_up_only
+-mp_text_chat_all
+-mp_text_chat_crew
+-mp_text_chat_friends
+-mp_text_chat_team
+-multiplayer_info
+-next_camera
+-next_weapon
+-nitropressed
+-openphone
+-ox_lib-radial
+-ox_target
+-parachute_brake_left
+-parachute_brake_right
+-parachute_deploy
+-parachute_detach
+-parachute_pitch_down_only
+-parachute_pitch_ud
+-parachute_pitch_up_only
+-parachute_precision_landing
+-parachute_smoke
+-parachute_turn_left_only
+-parachute_turn_lr
+-parachute_turn_right_only
+-phone
+-pickup
+-prev_weapon
+-push_to_talk
+-quad_loco_reverse
+-radio_wheel_lr
+-radio_wheel_ud
+-radiotalk
+-rappel_jump
+-rappel_long_jump
+-rappel_smash_window
+-reload
+-replay_advance
+-replay_back
+-replay_cameradown
+-replay_cameraup
+-replay_clip_delete
+-replay_ctrl
+-replay_cyclemarkerleft
+-replay_cyclemarkerright
+-replay_endpoint
+-replay_ffwd
+-replay_fovdecrease
+-replay_fovincrease
+-replay_hidehud
+-replay_marker_delete
+-replay_newmarker
+-replay_pause
+-replay_preview
+-replay_preview_audio
+-replay_record
+-replay_restart
+-replay_rewind
+-replay_save
+-replay_screenshot
+-replay_showhotkey
+-replay_snapmatic_photo
+-replay_start_stop_recording
+-replay_start_stop_recording_secondary
+-replay_startpoint
+-replay_timeline_duplicate_clip
+-replay_timeline_pickup_clip
+-replay_timeline_place_clip
+-replay_timeline_save
+-replay_toggle_timeline
+-replay_toggletime
+-replay_toggletips
+-replay_tools
+-respawn_faster
+-save_replay_clip
+-scaled_look_down_only
+-scaled_look_left_only
+-scaled_look_lr
+-scaled_look_right_only
+-scaled_look_ud
+-scaled_look_up_only
+-script_lb
+-script_left_axis_x
+-script_left_axis_y
+-script_ls
+-script_lt
+-script_pad_down
+-script_pad_left
+-script_pad_right
+-script_pad_up
+-script_rb
+-script_rdown
+-script_right_axis_x
+-script_right_axis_y
+-script_rleft
+-script_rright
+-script_rs
+-script_rt
+-script_rup
+-script_select
+-scripted_fly_lr
+-scripted_fly_ud
+-scripted_fly_zdown
+-scripted_fly_zup
+-select_character_franklin
+-select_character_michael
+-select_character_multiplayer
+-select_character_trevor
+-select_next_weapon
+-select_prev_weapon
+-select_weapon
+-select_weapon_auto_rifle
+-select_weapon_handgun
+-select_weapon_heavy
+-select_weapon_melee
+-select_weapon_shotgun
+-select_weapon_smg
+-select_weapon_sniper
+-select_weapon_special
+-select_weapon_unarmed
+-skip_cutscene
+-sniper_zoom
+-sniper_zoom_in
+-sniper_zoom_in_alternate
+-sniper_zoom_in_only
+-sniper_zoom_in_secondary
+-sniper_zoom_out
+-sniper_zoom_out_alternate
+-sniper_zoom_out_only
+-sniper_zoom_out_secondary
+-special_ability
+-special_ability_pc
+-special_ability_secondary
+-sprint
+-switch_visor
+-talk
+-tcs
+-throw_grenade
+-use_armor
+-veh_accelerate
+-veh_aim
+-veh_attack
+-veh_attack2
+-veh_bike_wings
+-veh_brake
+-veh_car_jump
+-veh_cin_cam
+-veh_cinematic_down_only
+-veh_cinematic_lr
+-veh_cinematic_ud
+-veh_cinematic_up_only
+-veh_drive_look
+-veh_drive_look2
+-veh_drop_projectile
+-veh_duck
+-veh_exit
+-veh_fly_attack
+-veh_fly_attack2
+-veh_fly_attack_camera
+-veh_fly_bomb_bay
+-veh_fly_boost
+-veh_fly_counter
+-veh_fly_duck
+-veh_fly_mouse_control_override
+-veh_fly_pitch_down_only
+-veh_fly_pitch_ud
+-veh_fly_pitch_up_only
+-veh_fly_roll_left_only
+-veh_fly_roll_lr
+-veh_fly_roll_right_only
+-veh_fly_select_next_weapon
+-veh_fly_select_prev_weapon
+-veh_fly_select_target_left
+-veh_fly_select_target_right
+-veh_fly_throttle_down
+-veh_fly_throttle_up
+-veh_fly_undercarriage
+-veh_fly_vertical_flight_mode
+-veh_fly_yaw_left
+-veh_fly_yaw_right
+-veh_grappling_hook
+-veh_gun_down
+-veh_gun_left
+-veh_gun_lr
+-veh_gun_right
+-veh_gun_ud
+-veh_gun_up
+-veh_handbrake
+-veh_headlight
+-veh_horn
+-veh_hotwire_left
+-veh_hotwire_right
+-veh_hydraulics_control_down
+-veh_hydraulics_control_left
+-veh_hydraulics_control_lr
+-veh_hydraulics_control_right
+-veh_hydraulics_control_toggle
+-veh_hydraulics_control_ud
+-veh_hydraulics_control_up
+-veh_jump
+-veh_look_behind
+-veh_look_left
+-veh_look_right
+-veh_melee_hold
+-veh_melee_left
+-veh_melee_right
+-veh_mouse_control_override
+-veh_move_down
+-veh_move_down_only
+-veh_move_left
+-veh_move_left_only
+-veh_move_lr
+-veh_move_right
+-veh_move_right_only
+-veh_move_ud
+-veh_move_up
+-veh_move_up_only
+-veh_next_radio
+-veh_next_radio_track
+-veh_parachute
+-veh_passenger_aim
+-veh_passenger_attack
+-veh_prev_radio
+-veh_prev_radio_track
+-veh_pushbike_front_brake
+-veh_pushbike_pedal
+-veh_pushbike_rear_brake
+-veh_pushbike_sprint
+-veh_radio_wheel
+-veh_rocket_boost
+-veh_roof
+-veh_select_next_weapon
+-veh_select_prev_weapon
+-veh_shift_gear_down
+-veh_shift_gear_up
+-veh_shuffle
+-veh_slowmo_down_only
+-veh_slowmo_ud
+-veh_slowmo_up_only
+-veh_special
+-veh_special_ability_franklin
+-veh_stunt_ud
+-veh_sub_ascend
+-veh_sub_descend
+-veh_sub_mouse_control_override
+-veh_sub_pitch_down_only
+-veh_sub_pitch_ud
+-veh_sub_pitch_up_only
+-veh_sub_throttle_down
+-veh_sub_throttle_up
+-veh_sub_turn_hard_left
+-veh_sub_turn_hard_right
+-veh_sub_turn_left_only
+-veh_sub_turn_lr
+-veh_sub_turn_right_only
+-veh_transform
+-vstr
+-weapon_special
+-weapon_special_two
+-weapon_wheel_lr
+-weapon_wheel_next
+-weapon_wheel_prev
+-weapon_wheel_ud
+-whistle
+_assert
+_crash
+_except
+accessory
+archetypelist = false^7
+arsuspen
+assetscount
+bind
+bone
+bracelete
+c
+c1
+c2
+cabelo
+calca
+cam_disableCameraShake = false^7
+cam_enableHandbrakeCamera = true^7
+cam_vehicleFirstPersonFOV = 0.000000^7
+camisa
+cancelarteste
+cancelload
+cancelprog
+cancelprogress
+cdp
+cl_crosshair_drawoutline = true^7
+cl_crosshair_dynamic_maxdist_splitratio = 0.350000^7
+cl_crosshair_dynamic_splitalpha_innermod = 1.000000^7
+cl_crosshair_dynamic_splitalpha_outermod = 0.500000^7
+cl_crosshair_dynamic_splitdist = 7.000000^7
+cl_crosshair_outlinethickness = 1.000000^7
+cl_crosshair_t = false^7
+cl_crosshairalpha = 200^7
+cl_crosshaircolor = 1^7
+cl_crosshaircolor_b = 50^7
+cl_crosshaircolor_g = 250^7
+cl_crosshaircolor_r = 50^7
+cl_crosshairdot = true^7
+cl_crosshairgap = 1.000000^7
+cl_crosshairsize = 5.000000^7
+cl_crosshairstyle = 0^7
+cl_crosshairthickness = 0.500000^7
+cl_crosshairusealpha = true^7
+cl_customCrosshair = false^7
+cl_discordRichPresence = enabled^7
+cl_drawCpuUsage = true^7
+cl_drawFPS = true^7
+cl_drawGpuMemoryUsage = true^7
+cl_drawGpuTemp = true^7
+cl_drawGpuUsage = true^7
+cl_drawPacketLoss = true^7
+cl_drawPerf = false^7
+cl_drawPerfFPS = true^7
+cl_drawPing = true^7
+cl_rcdFailureBackoff = 500^7
+cl_rockstarId = 106458727^7
+closedialog
+clothingexit
+cmdlist
+colete
+comoMinerar
+con_addChannelFilter
+con_autoScroll = true^7
+con_channelFilters
+con_miniconChannels = minicon:*^7
+con_removeChannelFilter
+con_winconsole = false^7
+connect
+copiar
+corrente
+cycleproximity
+desbugaradm
+destrancaradm
+destrancarnosync
+developer = 0^7
+devgui_cmd
+devgui_convar
+disconnect
+doshiftdown
+doshiftup
+e
+emote
+emotebind
+emotebinds
+emotemenu
+emotes
+example
+exec
+fix
+fps
+ft
+game_amdAntiLagPresent = true^7
+game_enableDynamicDoorCreation = false^7
+game_enableFlyThroughWindscreen = false^7
+game_enablePlayerJumpRagdollControl = false^7
+game_enablePlayerRagdollOnCollision = false^7
+game_enableScaleformDebugLog = false^7
+game_enableStableOverlaySort = false^7
+game_mute = profile_sfxVolume 0; profile_musicVolumeInMp 0; profile_musicVolume 0^7
+game_profileLoading = false^7
+game_sanitizeRagdollEvents = false^7
+game_showStreamingProgress = false^7
+game_unmute = profile_sfxVolume 25; profile_musicVolumeInMp 10; profile_musicVolume 10^7
+game_useAmdAntiLag = true^7
+game_useAudioFrameLimiter = true^7
+game_useSynchronousAudio = true^7
+houseday
+hud
+info
+infoencontro
+interligar
+invoke-levelload
+list_aces
+list_principals
+loadlevel
+localGame
+luvas
+mascara
+menucasa
+meucarro
+meucorpo
+meulevel
+mochila
+modelviewer = false^7
+mono_enableMemoryUsageTracking = true^7
+moo = 0^7
+nc
+net_maxMtu = 1300^7
+net_pgStats = false^7
+net_printOwner
+net_showCommands = false^7
+net_showDrilldown = false^7
+net_showPools = false^7
+net_showTime = false^7
+net_statsFile = ^7
+netEventLog = false^7
+netgraph = false^7
+netobjviewer = false^7
+netobjviewer_syncLog = false^7
+nui_beginChromeTracing
+nui_devtools
+nui_endChromeTracing
+nui_useFixedSize = false^7
+nui_useInProcessGpu = true^7
+nui_useSharedResources = true^7
+oculus
+onesync_logFile = ^7
+openDatalogger
+opendialog
+ossinho
+ouvido
+ox_lib
+pagarseguro
+previewContext
+profile_0x081af00e = 1^7
+profile_0x129b8eee = 1^7
+profile_0x2dde0b59 = 1^7
+profile_0x3c2af4eb = 0^7
+profile_0x41969fd9 = 1^7
+profile_0x5c2253bd = 1^7
+profile_0x5fbb0258 = 1^7
+profile_0x7e112a88 = 1^7
+profile_0x7efead51 = 0^7
+profile_0x82caae17 = 1^7
+profile_0x85e405e7 = 1^7
+profile_0x903b4dcc = 1^7
+profile_0x91b99a13 = 0^7
+profile_0xbda038a7 = 0^7
+profile_0xbde62737 = 5^7
+profile_0xc3b24aae = 0^7
+profile_0xd4d44298 = 5^7
+profile_0xd88d28bb = 0^7
+profile_0xe02d8d5c = 0^7
+profile_0xf1e8d8fb = 0^7
+profile_0xf50f1958 = 0^7
+profile_0xff63a39a = 0^7
+profile_advGfxHdFlight = 0^7
+profile_advGfxLongShadows = 0^7
+profile_advGfxMaxLod = 0^7
+profile_advGfxShadowsDistMult = 0^7
+profile_advGfxUltraShadows = 0^7
+profile_aimAcceleration = 7^7
+profile_aimDeadzone = 14^7
+profile_alternateDriveby = 1^7
+profile_alternateHandbrake = 1^7
+profile_audioMuteOnFocusLoss = 1^7
+profile_autosave = 1^7
+profile_bigRadar = 0^7
+profile_bigRadarNames = 0^7
+profile_cameraHeight = 0^7
+profile_cinematicShooting = 0^7
+profile_controlConfig = 0^7
+profile_controlConfigFps = 0^7
+profile_controllerLightEffect = 1^7
+profile_controllerSensitivity = 5^7
+profile_controlsContext = 0^7
+profile_ctrlSpeaker = 0^7
+profile_ctrlSpeakerHeadphone = 0^7
+profile_ctrlSpeakerVol = 0^7
+profile_currentLanguage = 5^7
+profile_diagBoost = 0^7
+profile_displayGps = 1^7
+profile_displayHud = 1^7
+profile_dof = 1^7
+profile_facebookUpdates = 0^7
+profile_feedCrew = 1^7
+profile_feedDelay = 2^7
+profile_feedFriends = 1^7
+profile_feedPhone = 1^7
+profile_feedSocial = 1^7
+profile_feedStats = 1^7
+profile_feedStore = 1^7
+profile_feedTooltip = 1^7
+profile_fpsAimAcceleration = 7^7
+profile_fpsAimDeadzone = 14^7
+profile_fpsAimSensitivity = 5^7
+profile_fpsAutoLevel = 1^7
+profile_fpsCombatroll = 1^7
+profile_fpsDefaultAimType = 0^7
+profile_fpsFieldOfView = 5^7
+profile_fpsHeadbob = 1^7
+profile_fpsLookSensitivity = 5^7
+profile_fpsPersistantView = 0^7
+profile_fpsRagdoll = 1^7
+profile_fpsRelativeVehicleCameraDrivebyAiming = 1^7
+profile_fpsThirdPersonCover = 0^7
+profile_fpsVehAutoCenter = 1^7
+profile_gamma = 18^7
+profile_hoodCamera = 0^7
+profile_invertLook = 0^7
+profile_invertMouse = 0^7
+profile_invertMouseFlying = 0^7
+profile_invertMouseSub = 0^7
+profile_kbmToggleAim = 0^7
+profile_landingPage = 1^7
+profile_lookAroundSensitivity = 5^7
+profile_measurementSystem = 1^7
+profile_mouseAcceleration = 0^7
+profile_mouseAutocenterBike = 10^7
+profile_mouseAutocenterCar = 10^7
+profile_mouseAutocenterPlane = 10^7
+profile_mouseDrive = 0^7
+profile_mouseDrivingScale = 50^7
+profile_mouseFly = 0^7
+profile_mouseHeliScale = 50^7
+profile_mouseOnFootScale = 50^7
+profile_mousePlaneScale = 50^7
+profile_mouseSub = 0^7
+profile_mouseSubScale = 50^7
+profile_mouseType = 0^7
+profile_mouseWeightScale = 0^7
+profile_musicVolume = 0^7
+profile_musicVolumeInMp = 0^7
+profile_pulseHeadset = 0^7
+profile_radarMode = 1^7
+profile_radioStation = 6^7
+profile_replayAutoResumeRecording = 0^7
+profile_replayAutoSaveRecording = 0^7
+profile_replayMemLimit = 9^7
+profile_replayMode = 1^7
+profile_reticule = 0^7
+profile_reticuleSize = 0^7
+profile_rockstarEditorExportGraphicsUpgrade = 1^7
+profile_rockstarEditorTooltip = 1^7
+profile_safezoneSize = 7^7
+profile_sfxVolume = 1^7
+profile_sixaxisBike = 0^7
+profile_sixaxisBoat = 0^7
+profile_sixaxisHeli = 0^7
+profile_sixaxisReload = 0^7
+profile_skfx = 1^7
+profile_sniperZoom = 1^7
+profile_speakerOutput = 3^7
+profile_ssFront = 1^7
+profile_ssRear = 1^7
+profile_startupFlow = 0^7
+profile_subtitles = 1^7
+profile_swapRollYawMouseFlying = 0^7
+profile_targetConfig = 3^7
+profile_urAutoscan = 1^7
+profile_urPlaymode = 0^7
+profile_vibration = 1^7
+profile_vidAdapter = 0^7
+profile_vidAspect = 0^7
+profile_videoUploadPrivacy = 0^7
+profile_vidPauseOnFocusLoss = 1^7
+profile_vidRefresh = 4^7
+profile_vidResolution = 11^7
+profile_vidScreenType = 2^7
+profile_vidStereo = 0^7
+profile_vidStereoConvergence = 2^7
+profile_vidStereoSeparation = 0^7
+profile_vidVsync = 1^7
+profile_voiceChatMode = 1^7
+profile_voiceEnable = 1^7
+profile_voiceFeedback = 0^7
+profile_voiceInputDevice = 0^7
+profile_voiceMicSensitivity = 0^7
+profile_voiceMicVolume = 10^7
+profile_voiceMusicVolume = 0^7
+profile_voiceOutput = 1^7
+profile_voiceOutputDevice = 0^7
+profile_voiceOutputVolume = 10^7
+profile_voiceSoundVolume = 2^7
+profile_voiceSpeakers = 0^7
+profile_voiceTalkEnabled = 1^7
+profiler
+pzadd
+pzcancel
+pzcomboinfo
+pzcreate
+pzfinish
+pzlast
+pzundo
+quit
+rbind
+receberagora
+relogio
+removestance
+replayEditor
+resmon = false^7
+reverterroupa
+reviveme
+rf
+sapato
+save_gta_cache
+se_debug = false^7
+seletor
+set
+seta
+setr
+setvoiceintent
+showinv
+som
+spec
+stance
+stancer
+startload
+startprogress
+storymode
+str_enableFlush = false^7
+str_maxVehicleTextureRes = 1024^7
+str_maxVehicleTextureResRgba = 512^7
+str_requestFlush
+strdbg = false^7
+streamermode
+strlist = false^7
+strmem = false^7
+su
+sv_enableNetEventReassembly = true^7
+sv_protectServerEntities = false^7
+sv_showBusySpinnerOnLoadingScreen = true^7
+sv_stateBagStrictMode = false^7
+test_ace
+testando
+tirarmochila
+toggle
+topo
+tx
+txadmin
+txAdmin-locale = pt^7
+txAdmin-menuEnabled = true^7
+txAdmin-reauth
+txAdmin:menu:boostVehicle
+txAdmin:menu:clearAreaddw
+txAdmin:menu:deleteVehicle
+txAdmin:menu:fixVehicle
+txAdmin:menu:healMyself
+txAdmin:menu:noClipToggle
+txAdmin:menu:openPlayersPagess
+txAdmin:menu:spawnVehicle
+txAdmin:menu:togglePlayerIDs
+txAdmin:menu:tpBack
+txAdmin:menu:tpToCoords
+txAdmin:menu:tpToWaypoint
+ui_customBrandingEmoji = ^7
+ui_disableMusicTheme = true^7
+ui_extNickname = Samuel^7
+ui_forceMusicTheme = false^7
+ui_loadingCursor = false^7
+ui_maxQueriesPerMinute = 5000^7
+ui_premium = false^7
+ui_rootUrl = nui://game/ui/root.html^7
+ui_selectMusic = dlc_awxm2018_theme_5_stems^7
+ui_updateChannel = beta^7
+ui_url = https://nui-game-internal/ui/app/index.html^7
+uiConnect
+uiConnectHost = ^7
+unbind
+unbindall
+velocimetro
+vestimenta
+vid_budgetScale = 20^7
+visor
+voice_defaultCycle = L^7
+voice_defaultRadio = CAPITAL^7
+voice_enableNoiseSuppression = true^7
+voice_enableRadioAnim = 1^7
+voice_inBitrate = 48000^7
+voice_use2dAudio = false^7
+voice_use3dAudio = false^7
+voice_useAudioContext = false^7
+voice_useNativeAudio = true^7
+voice_useSendingRangeOnly = true^7
+vol
+vstr
+wait
+walk
+walks
+warningMessage
+warningMessageResult = 0^7
+zonedddssdd

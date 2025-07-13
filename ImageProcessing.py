@@ -277,15 +277,46 @@ class ImageProcessor:
             print(f"Erro na visualização: {str(e)}")
             return None
     
-    def apply_green_mask(self, image):
+    def apply_mask(self, image, mask):
         """
-        Aplica uma máscara de cor verde em uma imagem.
+        Aplica uma máscara em uma imagem.
+
+        Args:
+            image (numpy.ndarray): Imagem de entrada.
+            mask (numpy.ndarray): Máscara binária (valores 0 e 255) com as mesmas dimensões da imagem.
+
+        Returns:
+            numpy.ndarray: Imagem com a máscara aplicada.
+        """
+        try:
+            if image is None:
+                raise ValueError("Imagem é None")
+            
+            if mask is None:
+                raise ValueError("Máscara é None")
+            
+            # Verifica se as dimensões são compatíveis
+            if image.shape[:2] != mask.shape[:2]:
+                raise ValueError("Dimensões da imagem e máscara não são compatíveis")
+            
+            # Aplica a máscara na imagem
+            masked_image = cv2.bitwise_and(image, image, mask=mask)
+            
+            return masked_image
+            
+        except Exception as e:
+            print(f"Erro ao aplicar a máscara: {str(e)}")
+            return None
+
+    def create_green_mask(self, image):
+        """
+        Cria uma máscara para detectar áreas verdes em uma imagem.
 
         Args:
             image (numpy.ndarray): Imagem de entrada (em formato BGR).
 
         Returns:
-            numpy.ndarray: Imagem com a máscara aplicada, mostrando apenas as áreas verdes.
+            numpy.ndarray: Máscara binária das áreas verdes.
         """
         try:
             if image is None:
@@ -301,14 +332,110 @@ class ImageProcessor:
             # Cria a máscara binária
             mask = cv2.inRange(hsv, lower_green, upper_green)
 
-            # Aplica a máscara na imagem original
-            masked_image = cv2.bitwise_and(image, image, mask=mask)
-
-            return masked_image
+            return mask
 
         except Exception as e:
-            print(f"Erro ao aplicar a máscara verde: {str(e)}")
+            print(f"Erro ao criar a máscara verde: {str(e)}")
             return None
+
+    def create_color_mask(self, image, lower_bound, upper_bound, color_space='HSV'):
+        """
+        Cria uma máscara para detectar uma faixa específica de cores.
+
+        Args:
+            image (numpy.ndarray): Imagem de entrada.
+            lower_bound (numpy.ndarray): Limite inferior da cor (array com 3 valores).
+            upper_bound (numpy.ndarray): Limite superior da cor (array com 3 valores).
+            color_space (str): Espaço de cores ('HSV', 'BGR', 'RGB').
+
+        Returns:
+            numpy.ndarray: Máscara binária da faixa de cores especificada.
+        """
+        try:
+            if image is None:
+                raise ValueError("Imagem é None")
+            
+            # Converte para o espaço de cores especificado
+            if color_space.upper() == 'HSV':
+                converted_image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
+            elif color_space.upper() == 'RGB':
+                converted_image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+            elif color_space.upper() == 'BGR':
+                converted_image = image
+            else:
+                raise ValueError("Espaço de cores não suportado. Use 'HSV', 'BGR' ou 'RGB'")
+            
+            # Cria a máscara
+            mask = cv2.inRange(converted_image, lower_bound, upper_bound)
+            
+            return mask
+            
+        except Exception as e:
+            print(f"Erro ao criar a máscara de cor: {str(e)}")
+            return None
+        
+    def count_colored_pixels(self, image, threshold=10):
+        """
+        Conta quantos pixels coloridos existem na imagem.
+        Um pixel é considerado colorido se pelo menos um canal for maior que o threshold.
+        
+        Args:
+            image (numpy.ndarray): Imagem de entrada
+            threshold (int): Valor limite para considerar um pixel como preto (0-255)
+        
+        Returns:
+            int: Número de pixels coloridos na imagem, ou -1 se houver erro
+        """
+        try:
+            if image is None:
+                raise ValueError("Imagem é None")
+            
+            # Se a imagem for colorida
+            if len(image.shape) == 3:
+                # Um pixel é colorido se pelo menos um canal > threshold
+                mask = np.any(image > threshold, axis=2)
+                colored_pixels = np.sum(mask)
+            else:
+                # Imagem em escala de cinza: pixel colorido se valor > threshold
+                colored_pixels = np.sum(image > threshold)
+            
+            return int(colored_pixels)
+        
+        except Exception as e:
+            print(f"Erro ao contar pixels coloridos: {str(e)}")
+            return -1
+        
+    def colored_pixels_percentage(self, image, threshold=10):
+        """
+        Calcula a porcentagem de pixels coloridos na imagem.
+        Um pixel é considerado colorido se pelo menos um canal for maior que o threshold.
+        
+        Args:
+            image (numpy.ndarray): Imagem de entrada
+            threshold (int): Valor limite para considerar um pixel como preto (0-255)
+        
+        Returns:
+            float: Porcentagem de pixels coloridos (0.0 a 100.0), ou -1.0 se houver erro
+        """
+        try:
+            if image is None:
+                raise ValueError("Imagem é None")
+            
+            # Conta pixels coloridos
+            if len(image.shape) == 3:
+                mask = np.any(image > threshold, axis=2)
+                colored_pixels = np.sum(mask)
+            else:
+                colored_pixels = np.sum(image > threshold)
+            
+            total_pixels = image.shape[0] * image.shape[1]
+            percentage = (colored_pixels / total_pixels) * 100.0
+            
+            return percentage
+        
+        except Exception as e:
+            print(f"Erro ao calcular porcentagem de pixels coloridos: {str(e)}")
+            return -1.0
 
 # Exemplo de uso
 if __name__ == "__main__":
